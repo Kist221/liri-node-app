@@ -4,7 +4,8 @@
   "description": "LIRI is your personal useless assistant!",
   "main": "run.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "start": "node run.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,11 @@
   "bugs": {
     "url": "https://github.com/Kist221/liri-node-app/issues"
   },
-  "homepage": "https://github.com/Kist221/liri-node-app#readme"
+  "homepage": "https://github.com/Kist221/liri-node-app#readme",
+  "dependencies": {
+    "node-spotify-api": "^1.0.7",
+    "request": "^2.83.0",
+    "twitter": "^1.7.1",
+    "mocha": "^4.1.0"
+  }
 }
