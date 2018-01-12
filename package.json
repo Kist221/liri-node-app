@@ -5,7 +5,7 @@
   "main": "run.js",
   "scripts": {
     "test": "mocha",
-    "start": "node run.js"
+    "start": "node liri.js"
   },
   "repository": {
     "type": "git",
