@@ -3,7 +3,7 @@ console.log("\n============ TEST.JS RUNNING ============\n")
 var describe = require("mocha").describe;
 var it = require("mocha").it;
 var assert = require("assert");
-var file = require("./file.js");
+var liri = require("./liri.js");
 
 // describe('math module', function() {
 //   describe('math.add', function() {

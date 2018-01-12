@@ -1,8 +1,17 @@
 console.log("\n=============== RUN.JS RUNNING ===============\n")
-// dependencies
-var request = require("request");
-var Twitter = require('twitter');
-var spotify = require("node-spotify-api");
+
+// require keys.js file
 var keys = require("./keys.js");
 
-console.log(keys.twitter);
+// seperate API keys
+var twitter = keys.twitter;
+var spotify = keys.spotify;
+
+// call to get timeline tweets
+twitter.get('statuses/home_timeline', function(error, tweets, response) {
+	if(error) throw error;
+	// The tweets.
+	console.log(tweets[0]); 
+	// Raw response object.
+	// console.log(response);  
+});
