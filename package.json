@@ -1,0 +1,23 @@
+{
+  "name": "liri-node-app",
+  "version": "1.0.0",
+  "description": "LIRI is your personal useless assistant!",
+  "main": "run.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kist221/liri-node-app.git"
+  },
+  "keywords": [
+    "LIRI",
+    "SIRI"
+  ],
+  "author": "Kist221",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kist221/liri-node-app/issues"
+  },
+  "homepage": "https://github.com/Kist221/liri-node-app#readme"
+}
