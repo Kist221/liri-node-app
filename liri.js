@@ -7,11 +7,20 @@ var keys = require("./keys.js");
 var twitter = keys.twitter;
 var spotify = keys.spotify;
 
+// variable to store twitter response
+var tweetList;
+
 // call to get timeline tweets
-twitter.get('statuses/home_timeline', function(error, tweets, response) {
-	if(error) throw error;
+twitter.get('statuses/user_timeline', function(error, tweets, response) {
+	if(error) console.log(error);
 	// The tweets.
-	console.log(tweets[0]); 
+	tweetList = tweets;
+
+	// loop through tweets array
+	for (var i = 0; i < tweetList.length; i++) {
+		// console log tweet info
+		console.log("\n\n\n" + tweetList[i].user.screen_name + " wrote:\n" + tweetList[i].text + "\n\non: " + tweetList[i].created_at.slice(0, -14));
+	}
 	// Raw response object.
 	// console.log(response);  
 });

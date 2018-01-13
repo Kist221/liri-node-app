@@ -1,4 +1,4 @@
-console.log('this is loaded');
+console.log('keys loaded');
 
 // TWITTER
 var Twitter = require('twitter');
