@@ -14,7 +14,7 @@ var getTweets = function () {
 		// loop through tweets array
 		for (var i = 0; i < tweetList.length; i++) {
 			// console log tweet info
-			console.log("\n\n\n" + tweetList[i].created_at.slice(0, -14) + "\n" + tweetList[i].user.screen_name + " wrote:\n" + tweetList[i].text);
+			console.log("\n\n\n" + tweetList[i].created_at.slice(0, -14) + "\n" + tweetList[i].user.screen_name + " wrote:\n" + tweetList[i].text + "\n");
 		}
 		// Raw response object.
 		// console.log(response);  

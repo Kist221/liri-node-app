@@ -17,7 +17,7 @@ var spotifySearch = function(query) {
 		// console.log(response);
 		// loop through inputs
 		for (var i = 0; i < response.length; i++) {
-			console.log("\nSong: " + response[i].name, "\nArtist: " + response[i].artists[0].name, "\nAlbum: " + response[i].album.name, "\nPreview: " + response[i].preview_url); 
+			console.log("\nSong: " + response[i].name, "\nArtist: " + response[i].artists[0].name, "\nAlbum: " + response[i].album.name, "\nPreview: " + response[i].preview_url + "\n"); 
 		}
 	});
 };

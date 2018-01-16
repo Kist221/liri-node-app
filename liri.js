@@ -1,8 +1,9 @@
-console.log("\n============================== RUN.JS RUNNING ==============================\n")
+console.log("\n\n\n============================== LIRI IS RUNNING ==============================\n")
 
 // require files
 var getTweets = require("./twitter.js").getTweets;
 var spotifySearch = require("./spotify.js").spotifySearch;
+var movieSearch = require("./omdb.js").movieSearch;
 
 // Take in the command line arguments
 var nodeArgs = process.argv;
@@ -25,13 +26,19 @@ var commandRunner = function() {
 		getTweets();
 	} else if (command === "spotify-this-song") {
 		// If no input provided then default to "The Sign" by Ace of Base.
-		var input = commandInput || "The Sign - Ace of Base";
-		console.log("\nSearching Spotify for: " + input + "\n");
+		var inputSpot = commandInput || "The Sign - Ace of Base";
+		console.log("\nSearching Spotify for: " + inputSpot + "\n");
 		// search spotify function - input needs to be a string 
-		spotifySearch(input);
+		spotifySearch(inputSpot);
+	} else if (command === "movie-this") {
+		// If no input provided then default to Mr. Nobody.
+		var inputMovie = commandInput || "Mr. Nobody";
+		console.log("\nSearching OMDB for: " + inputMovie + "\n");
+		// search OMDB function - input needs to be a string 
+		movieSearch(inputMovie);
 	} else {
 		// inform possible commands
-		console.log("\nPlease type a valid command:\nmy-tweets\nspotify-this-song\nmovie-this\ndo-what-it-says\n");
+		console.log("\nPlease type a valid command:\nmy-tweets\nspotify-this-song + input\nmovie-this + input\ndo-what-it-says\n");
 	}
 };
 
@@ -42,7 +49,7 @@ if (command !== undefined) {
 	commandRunner();
 } else {
 	// inform possible commands
-	console.log("\nPlease type a valid command:\nmy-tweets\nspotify-this-song\nmovie-this\ndo-what-it-says\n");
+	console.log("\nPlease type a valid command:\nmy-tweets\nspotify-this-song + input\nmovie-this + input\ndo-what-it-says\n");
 }
 
 
