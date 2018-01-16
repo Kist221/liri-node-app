@@ -6,5 +6,8 @@ var spotifySearch = require("./spotify.js").spotifySearch;
 
 // my twitter feed function
 getTweets();
-// search spotify function - (artist || album || track, query) - input needs to be strings 
-spotifySearch('track', "She's So Mean");
+
+// search spotify function - input needs to be a string 
+// If no input provided then default to "The Sign" by Ace of Base.
+var input = "" || "The Sign Ace of Base";
+spotifySearch(input);
