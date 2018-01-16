@@ -12,10 +12,13 @@ var spotifySearch = function(query) {
 		return console.log('Error occurred: ' + err);
 		}
 		// variable to store response to display info properly
-		var response = data.tracks.items[0];
+		var response = data.tracks.items;
 		// returned data
 		// console.log(response);
-		console.log("\nSong: " + response.name, "\nArtist: " + response.artists[0].name, "\nAlbum: " + response.album.name, "\nPreview: " + response.preview_url); 
+		// loop through inputs
+		for (var i = 0; i < response.length; i++) {
+			console.log("\nSong: " + response[i].name, "\nArtist: " + response[i].artists[0].name, "\nAlbum: " + response[i].album.name, "\nPreview: " + response[i].preview_url); 
+		}
 	});
 };
 
