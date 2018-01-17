@@ -4,6 +4,7 @@ console.log("\n\n\n============================== LIRI IS RUNNING ==============
 var getTweets = require("./twitter.js").getTweets;
 var spotifySearch = require("./spotify.js").spotifySearch;
 var movieSearch = require("./omdb.js").movieSearch;
+var doIt = require("./readIt.js").doIt;
 
 // Take in the command line arguments
 var nodeArgs = process.argv;
@@ -36,6 +37,10 @@ var commandRunner = function() {
 		console.log("\nSearching OMDB for: " + inputMovie + "\n");
 		// search OMDB function - input needs to be a string 
 		movieSearch(inputMovie);
+	} else if (command === "do-what-it-says") {
+		console.log("\n>>> Reading Command File <<<\n");
+		// run function to read file and run commands
+		doIt();
 	} else {
 		// inform possible commands
 		console.log("\nPlease type a valid command:\nmy-tweets\nspotify-this-song + input\nmovie-this + input\ndo-what-it-says\n");
