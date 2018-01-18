@@ -1,0 +1,17 @@
+Fetching My Tweets!
+
+Searching Spotify for:  can you feel the love tonight
+
+Searching Spotify for:  let it be
+
+Searching OMDB for:  the mask
+
+Searching OMDB for:  E.T.
+
+Searching OMDB for: Mr. Nobody
+
+Searching Spotify for: The Sign - Ace of Base
+
+Fetching My Tweets!
+
+>>> Reading Random.txt File <<<

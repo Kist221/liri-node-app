@@ -1,5 +1,8 @@
 console.log("\n\n\n============================== LIRI IS RUNNING ==============================\n")
 
+// require file system package built into node
+var fs = require("fs");
+
 // require files
 var getTweets = require("./twitter.js").getTweets;
 var spotifySearch = require("./spotify.js").spotifySearch;
@@ -19,26 +22,38 @@ for (var i = 3; i < nodeArgs.length; i++) {
   commandInput = commandInput + " " + nodeArgs[i];
 }
 
+// function to print & log outputs to console & log.txt (BONUS)
+var logger = function(logThis) {
+	// print to the console
+	console.log(logThis);
+	// write to the log.txt file
+	fs.appendFile("log.txt", logThis, function(err) {
+		if (err) {
+			return console.log(err);
+		}
+	});
+};
+
 // function that determines command input and runs accordingly
 var commandRunner = function() {
 	if (command === "my-tweets") {
-		console.log("\nFetching My Tweets!\n");
+		logger("\nFetching My Tweets!\n");
 		// my twitter feed function
 		getTweets();
 	} else if (command === "spotify-this-song") {
 		// If no input provided then default to "The Sign" by Ace of Base.
 		var inputSpot = commandInput || "The Sign - Ace of Base";
-		console.log("\nSearching Spotify for: " + inputSpot + "\n");
+		logger("\nSearching Spotify for: " + inputSpot + "\n");
 		// search spotify function - input needs to be a string 
 		spotifySearch(inputSpot);
 	} else if (command === "movie-this") {
 		// If no input provided then default to Mr. Nobody.
 		var inputMovie = commandInput || "Mr. Nobody";
-		console.log("\nSearching OMDB for: " + inputMovie + "\n");
+		logger("\nSearching OMDB for: " + inputMovie + "\n");
 		// search OMDB function - input needs to be a string 
 		movieSearch(inputMovie);
 	} else if (command === "do-what-it-says") {
-		console.log("\n>>> Reading Command File <<<\n");
+		logger("\n>>> Reading Random.txt File <<<\n");
 		// run function to read file and run commands
 		doIt();
 	} else {
