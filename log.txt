@@ -15,3 +15,13 @@ Searching Spotify for: The Sign - Ace of Base
 Fetching My Tweets!
 
 >>> Reading Random.txt File <<<
+
+Fetching My Tweets!
+
+Searching OMDB for:  Shrek
+
+Searching OMDB for:  The Mask
+
+Searching OMDB for: Mr. Nobody
+
+Searching Spotify for: The Sign - Ace of Base
